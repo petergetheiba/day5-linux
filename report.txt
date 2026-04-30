@@ -1,0 +1,17 @@
+=== VETERINARY DATA REPORT ===
+
+Total records:
+11 patients.csv
+
+Dog count:
+6
+
+Cat count:
+4
+
+Duplicate rows:
+
+Species summary:
+      4 cat
+      6 dog
+      1 species
