@@ -103,6 +103,17 @@ This is why I am learning this. And why I love it.
 | `uniq` without sort first | Missed non-consecutive duplicates | Always `sort \| uniq` |
 | `grep "Dog"` with capital D | No results returned | Use `grep -i "dog"` for case insensitive |
 | `cut` wrong column number | Got wrong data | Used `head -n 1` first to check structure |
+| `uniq` did not remove Bella duplicate | uniq works on whole rows after sorting — Bella rows were not consecutive | Real deduplication needs column-level logic using Python or SQL |
+
+## Key Lesson on Duplicates
+uniq detects duplicates at the whole row level only.
+In real data engineering, deduplication requires checking
+specific columns — for example, same name AND same species
+AND same weight. A patient named Max with 12kg and another
+Max with 18kg are two different animals — not duplicates.
+This level of logic requires Python or SQL — coming soon.
+Key Rule to Remember :uniq only removes duplicates when the file is SORTED first.
+Detecting duplicates → sort | uniq -d
 
 ## The Vet Meets Data Engineering Angle
 As a veterinarian I have always worked with patient records —
